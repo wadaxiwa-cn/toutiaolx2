@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "core-js": "^3.4.3",
     "element-ui": "^2.13.0",
     "vue": "^2.6.10",
@@ -35,5 +36,18 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wadaxiwa-cn/toutiaolx2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wadaxiwa-cn/toutiaolx2/issues"
+  },
+  "homepage": "https://github.com/wadaxiwa-cn/toutiaolx2#readme"
 }

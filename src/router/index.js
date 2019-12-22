@@ -4,26 +4,34 @@ import Home from '../views/home'
 import Login from '../views/login'
 
 Vue.use(VueRouter)
-// 主页
 
 const routes = [{
+  // 强制跳转
+  path: '/',
+  redirect: '/home'
+},
+{
+  // 主页
   path: '/home',
   name: 'home',
-  component: Home
-},
-// 登录页
-{
+  component: Home,
+  children: [{
+    path: '', // 二级路由 什么都不写 作为显示组件
+    component: Home
+  }]
+}, {
+  // 登录页
   path: '/login',
   component: Login
 }
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+// {
+//   path: '/about',
+//   name: 'about',
+//   // route level code-splitting
+//   // this generates a separate chunk (about.[hash].js) for this route
+//   // which is lazy-loaded when the route is visited.
+//   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+// }
 ]
 
 const router = new VueRouter({
